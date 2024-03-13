@@ -2,8 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include "rfidcardreader.h"
-#include "pinui.h"
+
+#include "cardreader.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -17,20 +17,19 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+
+
 private slots:
-    void handleInsertCardClick();
+    void handleInserCardClick();
     void handleCardNumberRead(short);
     void handlePinNumberRead(short);
 
-
 private:
     Ui::MainWindow *ui;
-    rfidCardReader * reader;
-    pinUI * pinReader;
-
-
-    short cardNumber,pinNumber,attemptsLeft;
-    short correctNumber=1234;
-    short correctPin = 1111;
+    short attemptsLeft;
+    short cardNumber,pinNumber;
+    short correctCardNumber = 1234;
+    short correctPinNumber=1122;
+    cardReader * readerPtr;
 };
 #endif // MAINWINDOW_H

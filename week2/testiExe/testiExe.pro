@@ -10,21 +10,20 @@ CONFIG += c++17
 
 SOURCES += \
     main.cpp \
-    mainwindow.cpp \
-    pinui.cpp \
-    rfidcardreader.cpp
+    mainwindow.cpp
 
 HEADERS += \
-    mainwindow.h \
-    pinui.h \
-    rfidcardreader.h
+    mainwindow.h
 
 FORMS += \
-    mainwindow.ui \
-    pinui.ui \
-    rfidcardreader.ui
+    mainwindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+win32: LIBS += -L$$PWD/../dll_kolmas/build/debug/ -ldll_kolmas
+
+INCLUDEPATH += $$PWD/../dll_kolmas
+DEPENDPATH += $$PWD/../dll_kolmas
