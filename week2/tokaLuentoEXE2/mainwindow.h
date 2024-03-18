@@ -3,7 +3,6 @@
 
 #include <QMainWindow>
 #include "dialog.h"
-#include "dll_kolmas.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -17,11 +16,12 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+private slots:
+    void handleDLLSignal(QString);
+    void handleClick();
+
 private:
     Ui::MainWindow *ui;
-    Dialog * ptr1;
-    Dll_kolmas *ptr2;
-
-
+    Dialog * ptr_dll;
 };
 #endif // MAINWINDOW_H

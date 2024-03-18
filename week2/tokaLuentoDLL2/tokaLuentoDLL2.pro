@@ -1,7 +1,10 @@
+
+QT += gui
+QT += core
 QT += widgets
 
 TEMPLATE = lib
-DEFINES += DLL_KOLMAS_LIBRARY
+DEFINES += TOKALUENTODLL2_LIBRARY
 
 CONFIG += c++17
 
@@ -11,12 +14,12 @@ CONFIG += c++17
 
 SOURCES += \
     dialog.cpp \
-    dll_kolmas.cpp
+    tokaluentodll2.cpp
 
 HEADERS += \
     dialog.h \
-    dll_kolmas_global.h \
-    dll_kolmas.h
+    tokaLuentoDLL2_global.h \
+    tokaluentodll2.h
 
 # Default rules for deployment.
 unix {

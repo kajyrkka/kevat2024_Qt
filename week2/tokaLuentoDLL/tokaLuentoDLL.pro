@@ -1,7 +1,7 @@
-QT += gui
+QT -= gui
 
 TEMPLATE = lib
-DEFINES += DLL_QUI_LIBRARY
+DEFINES += TOKALUENTODLL_LIBRARY
 
 CONFIG += c++17
 
@@ -10,11 +10,11 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    dll_qui.cpp
+    tokaluentodll.cpp
 
 HEADERS += \
-    dll_qui_global.h \
-    dll_qui.h
+    tokaLuentoDLL_global.h \
+    tokaluentodll.h
 
 # Default rules for deployment.
 unix {

@@ -1,20 +1,25 @@
 #ifndef DIALOG_H
 #define DIALOG_H
-
+#include "tokaLuentoDLL2_global.h"
 #include <QDialog>
-#include "dll_kolmas_global.h"
 
 namespace Ui {
 class Dialog;
 }
 
-class DLL_KOLMAS_EXPORT Dialog : public QDialog
+class TOKALUENTODLL2_EXPORT Dialog : public QDialog
 {
     Q_OBJECT
 
 public:
     explicit Dialog(QWidget *parent = nullptr);
     ~Dialog();
+
+signals:
+    void sendString(QString);
+
+private slots:
+    void clickHandler();
 
 private:
     Ui::Dialog *ui;

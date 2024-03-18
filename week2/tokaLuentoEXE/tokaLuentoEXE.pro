@@ -23,7 +23,7 @@ qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
-win32: LIBS += -L$$PWD/../dll_kolmas/build/debug/ -ldll_kolmas
+win32: LIBS += -L$$PWD/../tokaLuentoDLL/build/debug/ -ltokaLuentoDLL
 
-INCLUDEPATH += $$PWD/../dll_kolmas
-DEPENDPATH += $$PWD/../dll_kolmas
+INCLUDEPATH += $$PWD/../tokaLuentoDLL
+DEPENDPATH += $$PWD/../tokaLuentoDLL
